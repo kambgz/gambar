@@ -328,33 +328,32 @@
         }, 1000);
 
         document.getElementById('birthdayForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+            event.preventDefault();
 
-    const userName = document.getElementById('userName').value;
-    const destination = document.getElementById('destination').value;
+            const userName = document.getElementById('userName').value;
+            const destination = document.getElementById('destination').value;
 
-    // Pesan acak
-    const randomMessages = [
-        "Usia mu semakin bertambah, semakin tua dirimu kawan.",
-        "Semakin dekat pula ajal mu, banyak-banyak bersedekah agar jadi amal jariah kelak jika kamu mati.",
-        "Hidup ini singkat, manfaatkan waktu untuk berbuat baik.",
-        "Semoga setiap langkahmu membawa berkah dan kebahagiaan jangan lupa traktiran.",
-        "Jangan lupa untuk selalu bersyukur atas setiap detik yang diberikan dan jangan lupa traktiran."
-    ];
+            // Pesan acak
+            const randomMessages = [
+                "Usia mu semakin bertambah, semakin tua dirimu kawan.",
+                "Semakin dekat pula ajal mu, banyak-banyak bersedekah agar jadi amal jariah kelak jika kamu mati.",
+                "Hidup ini singkat, manfaatkan waktu untuk berbuat baik.",
+                "Semoga setiap langkahmu membawa berkah dan kebahagiaan.",
+                "Jangan lupa untuk selalu bersyukur atas setiap detik yang diberikan."
+            ];
 
-    // Memilih pesan acak
-    const randomMessage = randomMessages[Math.floor(Math.random() * randomMessages.length)];
+            // Memilih pesan acak
+            const randomMessage = randomMessages[Math.floor(Math.random() * randomMessages.length)];
 
-    // Pesan yang akan dikirimkan ke WhatsApp
-    const message = `Assalamualaikum Fathin, Selamat Ulang Tahun! 🎉 ${randomMessage} Dari: ${userName}, Tujuan: ${destination}`;
+            // Pesan yang akan dikirimkan ke WhatsApp
+          
 
-    // Membuka WhatsApp dengan pesan yang sudah disertakan
-    const phoneNumber = "6287846812535"; // Nomor WhatsApp tujuan tanpa tanda +
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappLink, '_blank'); // Mengarahkan ke WhatsApp
-});
-
+            // Membuka WhatsApp dengan pesan yang sudah disertakan
+            const phoneNumber = "6287846812535"; // Nomor WhatsApp tujuan tanpa tanda +
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappLink, '_blank'); // Mengarahkan ke WhatsApp
+        });
 
         // Menampilkan popup ketika tombol "Buka" ditekan
         document.getElementById('closePopup').addEventListener('click', function() {
